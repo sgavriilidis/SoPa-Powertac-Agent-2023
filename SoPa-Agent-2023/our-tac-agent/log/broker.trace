@@ -1,0 +1,170 @@
+5706 INFO  core.BrokerRunner: Starting session 1
+5721 INFO  core.BrokerPropertiesService: adding broker.properties
+5769 INFO  core.BrokerPropertiesService: Validating resource file:/home/praptis/Desktop/JAVA-Folder/MAS_Proj/our-tac-agent/target/classes/config/broker.properties
+5770 INFO  core.BrokerPropertiesService: loading config from file:/home/praptis/Desktop/JAVA-Folder/MAS_Proj/our-tac-agent/target/classes/config/broker.properties
+5897 INFO  core.PowerTacBroker: Register ContextManagerService.handleMessage(Competition)
+5897 INFO  core.PowerTacBroker: Register ContextManagerService.handleMessage(DistributionReport)
+5897 INFO  core.PowerTacBroker: Register ContextManagerService.handleMessage(Properties)
+5897 INFO  core.PowerTacBroker: Register ContextManagerService.handleMessage(CashPosition)
+5897 INFO  core.PowerTacBroker: Register ContextManagerService.handleMessage(BankTransaction)
+5899 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(MarketTransaction)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(MarketBootstrapData)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(MarketPosition)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(WeatherForecast)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(WeatherReport)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(BalanceReport)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(Orderbook)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(Competition)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(BalancingTransaction)
+5900 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(CapacityTransaction)
+5902 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(DistributionTransaction)
+5902 INFO  core.PowerTacBroker: Register MarketManagerService.handleMessage(ClearedTrade)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(TariffTransaction)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(CustomerBootstrapData)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(TariffSpecification)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(TariffStatus)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(BalancingControlEvent)
+5919 INFO  core.PowerTacBroker: Register PortfolioManagerService.handleMessage(TariffRevoke)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(SimResume)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(BrokerAccept)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(SimPause)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(Competition)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(TimeslotComplete)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(TimeslotUpdate)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(SimEnd)
+5920 INFO  core.PowerTacBroker: Register PowerTacBroker.handleMessage(SimStart)
+6105 ERROR core.JmsManagementService: javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+6105 INFO  core.JmsManagementService: registerMessageListener(OurBroker, org.powertac.samplebroker.core.BrokerMessageReceiver@10947c4e)
+6124 INFO  core.PowerTacBroker: Listening on queue OurBroker
+6144 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731766148"/>
+6236 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+22238 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731782260"/>
+23975 WARN  connection.CachingConnectionFactory: Could not close shared JMS Connection
+javax.jms.JMSException: Disposed due to prior exception
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:72) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1421) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.ActiveMQConnection.close(ActiveMQConnection.java:688) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.springframework.jms.connection.SingleConnectionFactory.closeConnection(SingleConnectionFactory.java:502) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory.resetConnection(SingleConnectionFactory.java:390) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.CachingConnectionFactory.resetConnection(CachingConnectionFactory.java:223) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory.onException(SingleConnectionFactory.java:368) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory$AggregatedExceptionListener.onException(SingleConnectionFactory.java:716) [spring-jms-5.3.20.jar:5.3.20]
+	at org.apache.activemq.ActiveMQConnection$5.run(ActiveMQConnection.java:1967) [activemq-client-5.15.11.jar:5.15.11]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+Caused by: org.apache.activemq.transport.TransportDisposedIOException: Disposed due to prior exception
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:125) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:173) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:345) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:219) ~[activemq-client-5.15.11.jar:5.15.11]
+	... 1 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:397) ~[?:?]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215) ~[activemq-client-5.15.11.jar:5.15.11]
+	... 1 more
+38355 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731798377"/>
+38386 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+54390 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731814412"/>
+54413 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+70416 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731830439"/>
+70420 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+86422 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731846445"/>
+102688 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731862709"/>
+116648 WARN  connection.CachingConnectionFactory: Could not close shared JMS Connection
+javax.jms.JMSException: Disposed due to prior exception
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:72) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1421) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.ActiveMQConnection.close(ActiveMQConnection.java:688) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.springframework.jms.connection.SingleConnectionFactory.closeConnection(SingleConnectionFactory.java:502) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory.resetConnection(SingleConnectionFactory.java:390) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.CachingConnectionFactory.resetConnection(CachingConnectionFactory.java:223) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory.onException(SingleConnectionFactory.java:368) [spring-jms-5.3.20.jar:5.3.20]
+	at org.springframework.jms.connection.SingleConnectionFactory$AggregatedExceptionListener.onException(SingleConnectionFactory.java:716) [spring-jms-5.3.20.jar:5.3.20]
+	at org.apache.activemq.ActiveMQConnection$5.run(ActiveMQConnection.java:1967) [activemq-client-5.15.11.jar:5.15.11]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [?:?]
+	at java.lang.Thread.run(Thread.java:830) [?:?]
+Caused by: org.apache.activemq.transport.TransportDisposedIOException: Disposed due to prior exception
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:125) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:114) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:173) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:345) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:219) ~[activemq-client-5.15.11.jar:5.15.11]
+	... 1 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:397) ~[?:?]
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:268) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:240) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:232) ~[activemq-client-5.15.11.jar:5.15.11]
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:215) ~[activemq-client-5.15.11.jar:5.15.11]
+	... 1 more
+118710 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731878732"/>
+118716 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+134719 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731894741"/>
+134729 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+150737 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731910759"/>
+150748 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+166752 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731926775"/>
+166765 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+182770 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731942790"/>
+182775 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+198783 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731958805"/>
+198803 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+214807 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731974829"/>
+214812 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+230813 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673731990835"/>
+230815 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+246817 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732006839"/>
+246820 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+262822 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732022845"/>
+262826 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+278829 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732038851"/>
+278837 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+294840 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732054863"/>
+294842 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+310843 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732070866"/>
+310852 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+326855 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732086878"/>
+326858 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+342859 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732102881"/>
+342863 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+358865 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732118887"/>
+358870 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+374872 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732134894"/>
+374874 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+390876 INFO  core.MessageDispatcher: sending text: 
+<broker-authentication username="OurBroker" password="secret" brokerTime="1673732150899"/>
+390879 INFO  core.PowerTacBroker: log attempt failed org.springframework.jms.UncategorizedJmsException: Uncategorized exception occurred during JMS processing; nested exception is javax.jms.JMSException: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
